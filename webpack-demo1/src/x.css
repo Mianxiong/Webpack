@@ -1,3 +1,4 @@
 body {
-    background: red;
+  background: green;
 }
+/* 不依赖dist目录文件，它直接在内存里就搞定了 */

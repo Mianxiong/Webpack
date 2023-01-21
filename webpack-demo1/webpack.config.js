@@ -8,6 +8,10 @@ module.exports = {
         // filename: 'index.js'
         filename: 'index.[contenthash].js'
     },
+    devtool: 'inline-source-map',
+    devServer: {
+       contentBase: './dist',
+    },
     plugins: [new HtmlWebpackPlugin({
         title: 'hmx',
         template: 'src/assets/index.html'
@@ -15,7 +19,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/i,
-            use: ["css-loader"],
+            use: ["style-loader","css-loader"],
         }, ],
     },
 };
