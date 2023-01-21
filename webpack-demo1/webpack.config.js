@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path')
 module.exports = {
     mode: 'development',
@@ -5,6 +6,10 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         // filename: 'index.js'
-        filename: '[name].[contenthash].js'
-    }
+        filename: 'index.[contenthash].js'
+    },
+    plugins: [new HtmlWebpackPlugin({
+        title: 'hmx',
+        template: 'src/assets/index.html'
+    })]
 };
