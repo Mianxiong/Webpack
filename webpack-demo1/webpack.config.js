@@ -11,5 +11,11 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         title: 'hmx',
         template: 'src/assets/index.html'
-    })]
+    })],
+    module: {
+        rules: [{
+            test: /\.css$/i,
+            use: ["css-loader"],
+        }, ],
+    },
 };
